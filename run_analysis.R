@@ -45,12 +45,6 @@ read_dataset <- function(dataset) {
 
 training <- read_dataset("train")
 test <- read_dataset("test")
-dataset <- bind_rows(training, test)
-
-average_dataset <- dataset %>%
+bind_rows(training, test) %>%
   group_by(subject_id, activity, feature) %>%
   summarise(average = mean(value))
-
-write.table(average_dataset, "average_dataset.txt", row.name = FALSE)
-
-average_dataset

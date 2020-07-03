@@ -29,9 +29,8 @@ later to assign readable labels to observations instead of ids.
    "subject_id", "activity", "feature", "value" columns (as the rest are either ids for merging
    records together or labels marks).
 4) Merge records of `test` and `train` sets together into a songle dataset.
-5) Prepare average dataset by grouping datasaet by "subject_id", "activity" and "feature" columns
+5) Results is average dataset by grouping dataset by "subject_id", "activity" and "feature" columns
 and summarizing new field "average" as mean value of average "value" for grouped sets.
-6) Write average dataset to *average_dataset.txt* file (in working directory).
 
 # Test environment
 * MacOS 10.15.4 (19E287)
